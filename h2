@@ -1,7 +1,5 @@
 #!/bin/bash
 
-function h1(){
-    echo hello $1
-}
 
-h1
+    echo hello $1
+
