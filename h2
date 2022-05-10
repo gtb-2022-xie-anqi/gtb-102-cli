@@ -1,7 +1,8 @@
 #!/bin/bash
 
 TS=$(date "+%Y-%m-%d %H:%M:%S")
-NAME=$@
-echo "[$TS] hello $NAME"
+ID=$1
+NICKNAME=$(grep $ID name.list | cut -d' ' -f2)
+echo "[$TS] hello $NICKNAME"
 # 等价于 echo [$TS] hello $NAME
 
