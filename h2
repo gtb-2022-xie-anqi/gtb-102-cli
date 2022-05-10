@@ -1,5 +1,7 @@
 #!/bin/bash
 
-
-echo [$(date "+%Y-%m-%d %H:%M:%S")] hello $*
+TS=$(date "+%Y-%m-%d %H:%M:%S")
+NAME=$@
+echo "[$TS] hello $NAME"
+# 等价于 echo [$TS] hello $NAME
 
