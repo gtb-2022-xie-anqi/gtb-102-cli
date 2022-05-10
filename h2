@@ -3,6 +3,11 @@
 TS=$(date "+%Y-%m-%d %H:%M:%S")
 ID=$1
 NICKNAME=$(grep $ID name.list | cut -d' ' -f2)
-echo "[$TS] hello $NICKNAME"
-# 等价于 echo [$TS] hello $NAME
+
+if  [[ "" == "$NICKNAME" ]]
+then
+    NICKNAME="lady"
+fi
+
+echo "[$TS] hello $NICKNAME"  # 等价于 echo [$TS] hello $NICKNAME
 
